@@ -32,8 +32,9 @@ export const tmdbApi = process.env.TMDB_KEY && process.env.TMDB_KEY;
     logger: true,
   });
   await fastify.register(FastifyCors, {
-    origin: ['https://sdevmarc-hontou-ani.vercel.app'],
+    origin: 'https://sdevmarc-hontou-ani.vercel.app',
     methods: 'GET',
+    credentials: true
   });
 
   if (process.env.NODE_ENV === 'DEMO') {
