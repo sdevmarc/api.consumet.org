@@ -32,7 +32,7 @@ export const tmdbApi = process.env.TMDB_KEY && process.env.TMDB_KEY;
   const PORT = Number(process.env.PORT) || 3002;
 
   await fastify.register(FastifyCors, {
-    origin: 'https://sdevmarc-hontou-ani.vercel.app',
+    origin: '*',
     methods: 'GET',
     credentials: true
   });
